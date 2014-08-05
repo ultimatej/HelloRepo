@@ -22,15 +22,15 @@
 <!DOCTYPE html>
 <!-- The hangout API JavaScript. Always include this first -->
 <script src="https://hangoutsapi.talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
-
+<p id="demo"></p>
 <!-- The JavaScript for this app. This must always be a full URL not a
      relative path.
      Tip: You can load it from a local web server such as
      http://localhost/app.js for faster single user development -->
-<script src="https://github.com/ultimatej/HelloRepo/blob/master/appenginehangout-a06b3b78c844/static/app.js"></script>
+<script> document.getElementById("demo").innerHTML = Date(); </script>
 
-<h1><img src="https://github.com/ultimatej/HelloRepo/blob/master/appenginehangout-a06b3b78c844/static/hangouts-logo.png" 
-    alt="Google+ Hangouts Logo" height="50" width="50">Starter App</h1>
+<!-- <h1><img src="https://github.com/ultimatej/HelloRepo/blob/master/appenginehangout-a06b3b78c844/static/hangouts-logo.png" 
+    alt="Google+ Hangouts Logo" height="50" width="50">Starter App</h1> -->
 <div style="float: left; padding: 0px 20px; border-right: 1px solid #EEE">
   <p>Collaborate with your friends to count to a big number!</p>
   <dl>
