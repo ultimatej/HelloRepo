@@ -22,14 +22,13 @@
 <!DOCTYPE html>
 <!-- The hangout API JavaScript. Always include this first -->
 <script src="//hangoutsapi.talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
-
-<link rel="stylesheet" type="text/css" href="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.css">
 <!-- The JavaScript for this app. This must always be a full URL not a
      relative path.
      Tip: You can load it from a local web server such as
      http://localhost/app.js for faster single user development -->
 <script src="http://localhost/development/app.js"></script>
 <script
+<link rel="stylesheet" type="text/css" href="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.css">
 src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
 </script>
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.js"></script>
