@@ -77,7 +77,7 @@
   <input type=button value="Get Message" id="getMessageButton"
       onClick="getMessageClick()"/>
 </div>
-<div id="error" style="display: none;">your hand is empty</div>
+<div id="error" style="display: none;">
     "your hand is empty"
 </div>
 <input type="button" id="draw" value="draw a card">
