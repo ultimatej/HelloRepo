@@ -33,8 +33,8 @@ src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
 </script>
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.js"></script>
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.js"></script>
-<h1><img src="http://localhost/development/hangouts-logo.png" 
-    alt="Google+ Hangouts Logo" height="50" width="50">Starter App</h1>
+<h1 style="text-align: center;"><img src="http://localhost/development/hangouts-logo.png" 
+    alt="Google+ Hangouts Logo" height="50" width="50">Market</h1>
 <div style="float: left; padding: 0px 20px; border-right: 1px solid #EEE">
   <p>Collaborate with your friends to count to a big number!</p>
   <dl>
