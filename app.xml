@@ -28,26 +28,7 @@
      http://localhost/app.js for faster single user development -->
 <script src="http://localhost/development/app.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Ultimate Market Making</title>
-    <link rel="stylesheet" type="text/css" media="all" href="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.css">
-    <style type="text/css">
-
-    body {
-        margin-top: 1.0em;
-        background-color: #fff;
-        font-family: "Helvetica,Arial,FreeSans";
-        color: #000000;
-    }
-    #container {
-        margin: 0 auto;
-        width: 860px;
-    }
-    #error{
-        display:none;color:#f00;border:1px solid #f60;padding:5px;margin:5px;
-    }
-</head>
+<link rel="stylesheet" type="text/css" media="all" href="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.css">
 
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.js"></script>
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.js"></script>
