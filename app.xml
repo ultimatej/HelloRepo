@@ -111,7 +111,7 @@ var hand = [];
         cardDeck.spread();
         showHand();
     }
-cardDeck.doDrawCard();
+doDrawCard();
 </script>
 <div style="clear: both;"></div>
 </div>
