@@ -82,7 +82,7 @@
 </div>
 <div id="yourHand"></div> 
 <script>
-var cardDeck = new playingCards(conf);
+var cardDeck = new playingCards();
 var hand = [];
     var showError = function(msg){
         $('#error').html(msg).show();
