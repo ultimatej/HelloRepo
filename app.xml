@@ -80,10 +80,11 @@
 <div id="error" style="display: none;">your hand is empty</div>
     "your hand is empty"
 </div>
+<input type="button" id="draw" value="draw a card">
 <div id="yourHand"></div> 
 <script>
-var cardDeck = new playingCards();
-var hand = [];
+    var cardDeck = new playingCards();
+    var hand = [];
     var showError = function(msg){
         $('#error').html(msg).show();
         setTimeout(function(){
@@ -111,7 +112,7 @@ var hand = [];
         cardDeck.spread();
         showHand();
     }
-doDrawCard();
+    $('#draw').click(doDrawCard);
 </script>
 <div style="clear: both;"></div>
 </div>
