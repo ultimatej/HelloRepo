@@ -63,7 +63,7 @@ Content
 
 <input type="button" id="draw" value="draw a card">
 <div id="yourHand"></div>
-<h2 id="handRankSum"></h2> 
+<div id="handRankSum"></div> 
 <script>
     var cardDeck = new playingCards();
     var hand = [];
