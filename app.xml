@@ -103,6 +103,7 @@
         for (var i = 0; i < hand.length; i++) {
             handRankSum += hand[i].numericRank();
         }
+        console.log(handRankSum);
         $('#handRankSum').html(handRankSum);
     }
 
