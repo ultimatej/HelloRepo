@@ -25,8 +25,8 @@
 <!-- The JavaScript for this app. This must always be a full URL not a
      relative path.
      Tip: You can load it from a local web server such as
-     http://localhost/app.js for faster single user development -->
-<script src="http://localhost/development/app.js"></script>
+     http://localhost/app.js for faster single user development 
+<script src="http://localhost/development/app.js"></script> -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -43,14 +43,24 @@
     #container {
         margin: 0 auto;
         width: 860px;
+        padding: 0px;
+        background: #FFFFFF;
+    }
+    #content {
+        width: 800px;
+        padding-top: 100px;
+        background: yellow;
     }
 </style>
 </head>
-<div id="container"> 
+<body>
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.js"></script>
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.js"></script>
+<div id="container">
 <h1 style="text-align: center;">Market</h1>
-
+<div id="content">
+Content
+</div>
 <input type="button" id="draw" value="draw a card">
 <div id="yourHand"></div>
 <h2 id="handRankSum"></h2> 
@@ -100,5 +110,6 @@
 </script>
 <div style="clear: both;"></div>
 </div>
+</body>
 ]]></Content>
 </Module>
