@@ -68,15 +68,6 @@
   <input type=button value="Reset" id="resetButton"
       onClick="resetButtonClick()"/>     
 </div>
-<div style="float: left; padding: 0px 20px">
-  <p>Fetch some JSON from main.py</p>
-  <dl>
-    <dt>Message:</dt>
-    <dd id="message"></dd>
-  </dl>
-  <input type=button value="Get Message" id="getMessageButton"
-      onClick="getMessageClick()"/>
-</div>
 <div id="error" style="display: none;">
     "your hand is empty"
 </div>
