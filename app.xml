@@ -72,7 +72,8 @@
     "your hand is empty"
 </div>
 <input type="button" id="draw" value="draw a card">
-<div id="yourHand"></div> 
+<div id="yourHand"></div>
+<h2 id="handRankSum"></h2> 
 <script>
     var cardDeck = new playingCards();
     var hand = [];
@@ -89,10 +90,7 @@
             el.append(hand[i].getHTML());
         }
     }
-    var doShuffle = function(){
-        cardDeck.shuffle();
-        cardDeck.spread(); // update card table
-    }
+  
     var doDrawCard = function(){
         var c = cardDeck.draw();
         if(!c){
@@ -100,9 +98,23 @@
             return;
         }
         hand[hand.length] = c;
-        cardDeck.spread();
         showHand();
+        handRankSum = 0;
+        for (var i = 0; i < hand.length; i++) {
+            handRankSum += hand[i].numericRank();
+        }
+        $('#handRankSum').html(handRankSum);
     }
+
+    $('#addCard').click(function(){
+        if(!hand.length){
+            showError('your hand is empty');
+            return;
+        }
+        var c = hand.pop();
+        showHand();
+        cardDeck.addCard(c);
+    });
     $('#draw').click(doDrawCard);
 </script>
 <div style="clear: both;"></div>
