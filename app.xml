@@ -42,20 +42,34 @@
     }
     #container {
         margin: 0 auto;
-        width: 860px;
         padding: 0px;
-        background: #FFFFFF;
+        background: red;
     }
-    #content {
-        width: 800px;
+    #top {
+        position: absolute;
+        top: 0px;
+        background: blue;
+    }
+    #bottom {
+        position: absolute;
+        bottom: 0px;
+        height: 100 px;
         padding-top: 100px;
         background: yellow;
     }
-    #yourHand,#handRankSum {
-        width: 580px;
+    #bottomContainer {
+        position: relative;
+    }
+    #yourHand {
+        position: absolute;
+        top: 0px;
         margin: 5px auto;
         border: 1px solid #FFFFFF;
-}
+    }
+    #handRankSum {
+        position: absolute;
+        bottom: 0px;
+    }
 </style>
 </head>
 <body>
@@ -63,12 +77,20 @@
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.js"></script>
 <div id="container">
 <h1 style="text-align: center;">Market</h1>
-<div id="content">
-Content
-
+<div id="top">
+Top
+</div>
+<div id="bottom">
+<div id="bottomContainer">
 <input type="button" id="draw" value="draw a card">
 <div id="yourHand"></div>
-<div id="handRankSum"></div> 
+<div id="handRankSum"></div>
+<div style="clear: both;"></div>
+</div>
+</div>
+</div>
+</body> 
+
 <script>
     var cardDeck = new playingCards();
     var hand = [];
@@ -113,9 +135,5 @@ Content
     });
     $('#draw').click(doDrawCard);
 </script>
-<div style="clear: both;"></div>
-</div>
-</div>
-</body>
 ]]></Content>
 </Module>
