@@ -41,56 +41,53 @@
         color: #000000;
     } -->
     #container {
-        position: relative;
-        margin: 0 auto;
-        padding: 0px;
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
         background: red;
     }
     #top {
-        position: absolute;
-        top: 0px;
+        
         background: blue;
     }
-    #bottom {
-        position: absolute;
-        bottom: 0px;
-        height: 100 px;
-        padding-top: 100px;
-        background: yellow;
-    }
+    
     #bottomContainer {
-        position: relative;
+        background: chocolate;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        right: 0;
+        text-align: center;
     }
     #yourHand {
-        position: absolute;
-        top: 0px;
-        margin: 5px auto;
-        border: 1px solid #FFFFFF;
+        background: green;       
     }
     #handRankSum {
-        position: absolute;
-        bottom: 0px;
+        background: wheat;    
     }
 </style>
-</head>
+
 <body>
-<script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.js"></script>
-<script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.js"></script>
 <div id="container">
 <div id="top">
 <h1 style="text-align: center;">Market</h1>
 </div>
-<div id="bottom">
 <div id="bottomContainer">
 <input type="button" id="draw" value="draw a card">
-<div id="yourHand"></div>
-<div id="handRankSum"></div>
-<div style="clear: both;"></div>
+<div id="yourHand">
+<p>This is your hand!</p>
+</div>
+<div id="handRankSum">
+<p>This is the hand sum</p>
 </div>
 </div>
 </div>
 </body> 
 
+<script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.js"></script>
+<script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.js"></script>
 <script>
     var cardDeck = new playingCards();
     var hand = [];
