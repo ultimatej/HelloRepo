@@ -34,13 +34,14 @@
     <link rel="stylesheet" type="text/css" href="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.css">
 
 <style type="text/css">
-    body {
+    <!-- body {
         margin-top: 1.0em;
         background-color: #fff;
         font-family: "Helvetica,Arial,FreeSans";
         color: #000000;
-    }
+    } -->
     #container {
+        position: relative;
         margin: 0 auto;
         padding: 0px;
         background: red;
@@ -76,9 +77,8 @@
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.js"></script>
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.js"></script>
 <div id="container">
-<h1 style="text-align: center;">Market</h1>
 <div id="top">
-Top
+<h1 style="text-align: center;">Market</h1>
 </div>
 <div id="bottom">
 <div id="bottomContainer">
