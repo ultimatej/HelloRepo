@@ -106,7 +106,7 @@
     }
     var showHand = function(){
         var cardOne = $('#cardOne')
-        car cardTwo = $('#cardTwo')
+        var cardTwo = $('#cardTwo')
         cardOne.html('');
         cardTwo.html('');
         cardOne.append(hand[0].getHTML());
