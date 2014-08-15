@@ -78,9 +78,9 @@
 <input type="button" id="draw" value="draw a card">
 <div id="yourHand">
 <p>This is your hand!</p>
+</div>
 <div>
 <p id="handRankSum">This is the hand sum</p>
-</div>
 </div>
 </div>
 </div>
