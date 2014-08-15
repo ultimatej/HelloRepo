@@ -66,7 +66,14 @@
         margin: auto;
         width: 50%;
     }
-
+    #cardOne {
+        float: left;
+        width: 50%;
+    }
+    #cardOne {
+        float: right;
+        width: 50%;
+    }
 </style>
 </head>
 <body>
@@ -79,8 +86,8 @@
 <input type="button" id="draw" value="draw a card">
 <div id="yourHand">
 <p>This is your hand!</p>
-<!-- <div id="cardOne"></div>
-<div id="cardTwo"></div> -->
+<div id="cardOne"></div>
+<div id="cardTwo"></div> 
 </div>
 </div>
 </div>
@@ -98,11 +105,12 @@
         },3000);
     }
     var showHand = function(){
-        var el = $('#yourHand')
-        el.html('');
-        for(var i=0;i<hand.length;i++){
-            el.append(hand[i].getHTML());
-        }
+        var cardOne = $('#cardOne')
+        car cardTwo = $('#cardTwo')
+        cardOne.html('');
+        cardTwo.html('');
+        cardOne.append(hand[0].getHTML());
+        cardTwo.append(hand[1].getHTML());
     }
   
     var doDrawCard = function(){
