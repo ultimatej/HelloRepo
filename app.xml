@@ -70,7 +70,7 @@
         float: left;
         width: 50%;
     }
-    #cardOne {
+    #cardTwo {
         float: right;
         width: 50%;
     }
@@ -105,12 +105,12 @@
         },3000);
     }
     var showHand = function(){
-        var cardOne = $('#cardOne')
-        var cardTwo = $('#cardTwo')
-        cardOne.html('');
-        cardTwo.html('');
-        cardOne.append(hand[0].getHTML());
-        cardTwo.append(hand[1].getHTML());
+        var firstCard = $('#cardOne')
+        var secondCard = $('#cardTwo')
+        firstCard.html('');
+        secondCard.html('');
+        firstCard.append(hand[0].getHTML());
+        secondCard.append(hand[1].getHTML());
     }
   
     var doDrawCard = function(){
