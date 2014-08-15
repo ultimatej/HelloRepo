@@ -80,8 +80,13 @@
 <div id="container">
 <div id="top">
 <h1 style="text-align: center;">Market</h1>
+<p id="marketAsk">$Market Ask</p>
+<p id="marketBid">$Market Bid</p>
+<p id="yourBid">$Your Bid</p>
+<p id="yourAsk">$Your Ask</p>
 </div>
 <div id="bottomContainer">
+<p id="currentPosition">This is your current position</p>
 <p id="handRankSum">This is the hand sum</p>
 <input type="button" id="draw" value="draw a card">
 <div id="yourHand">
@@ -105,12 +110,12 @@
         },3000);
     }
     var showHand = function(){
-        var firstCard = $('#cardOne')
-        var secondCard = $('#cardTwo')
-        firstCard.html('');
-        secondCard.html('');
-        firstCard.append(hand[0].getHTML());
-        secondCard.append(hand[1].getHTML());
+        var card1 = $('#cardOne')
+        var card2 = $('#cardTwo')
+        card1.html('');
+        card2.html('');
+        card1.append(hand[0].getHTML());
+        card2.append(hand[1].getHTML());
     }
   
     var doDrawCard = function(){
@@ -122,7 +127,7 @@
         hand[hand.length] = c;
         showHand();
         handRankSum = 0;
-        for (var i = 0; i < hand.length; i++) {
+        for (var i = 0; i < 2; i++) {
             handRankSum += hand[i].numericRank();
         }
         console.log(handRankSum);
