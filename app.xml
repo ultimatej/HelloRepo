@@ -83,9 +83,7 @@
 <div id="bottomContainer">
 <p id="currentPosition">This is your current position</p>
 <p id="handRankSum">This is the hand sum</p>
-<input type="button" id="draw" value="draw a card">
 <div id="yourHand">
-<p>This is your hand!</p>
 <div id="cardOne"></div>
 <div id="cardTwo"></div> 
 </div>
