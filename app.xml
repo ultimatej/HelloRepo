@@ -22,11 +22,6 @@
 <!DOCTYPE html>
 <!-- The hangout API JavaScript. Always include this first -->
 <script src="//hangoutsapi.talkgadget.google.com/hangouts/api/hangout.js?v=1.0"></script>
-<!-- The JavaScript for this app. This must always be a full URL not a
-     relative path.
-     Tip: You can load it from a local web server such as
-     http://localhost/app.js for faster single user development 
-<script src="http://localhost/development/app.js"></script> -->
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -100,50 +95,10 @@
 
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.js"></script>
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.js"></script>
-<script>
-    var cardDeck = new playingCards();
-    var hand = [];
-    var showError = function(msg){
-        $('#error').html(msg).show();
-        setTimeout(function(){
-            $('#error').fadeOut('slow');
-        },3000);
-    }
-    var showHand = function(){
-        var card1 = $('#cardOne')
-        var card2 = $('#cardTwo')
-        card1.html('');
-        card2.html('');
-        card1.append(hand[0].getHTML());
-        card2.append(hand[1].getHTML());
-    }
-  
-    var doDrawCard = function(){
-        var c = cardDeck.draw();
-        if(!c){
-            showError('no more cards');
-            return;
-        }
-        hand[hand.length] = c;
-        showHand();
-        handRankSum = 0;
-        for (var i = 0; i < 2; i++) {
-            handRankSum += hand[i].numericRank();
-        }
-        console.log(handRankSum);
-        $('#handRankSum').html(handRankSum);
-    }
-
-    $('#addCard').click(function(){
-        if(!hand.length){
-            showError('your hand is empty');
-            return;
-        }
-        var c = hand.pop();
-        showHand();
-        cardDeck.addCard(c);
-    });
-    $('#draw').click(doDrawCard);
-</script>
+<!-- The JavaScript for this app. This must always be a full URL not a
+     relative path.
+     Tip: You can load it from a local web server such as
+     http://localhost/app.js for faster single user development --> 
+<script src="http://localhost/development/app.js"></script> 
 ]]></Content>
 </Module>
