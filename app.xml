@@ -63,9 +63,8 @@
     }
     #yourHand {
         background: green;       
-    }
-    #handRankSum {
-        background: wheat;    
+        margin: auto;
+        width: 50%;
     }
 </style>
 </head>
@@ -75,12 +74,10 @@
 <h1 style="text-align: center;">Market</h1>
 </div>
 <div id="bottomContainer">
+<p id="handRankSum">This is the hand sum</p>
 <input type="button" id="draw" value="draw a card">
 <div id="yourHand">
 <p>This is your hand!</p>
-</div>
-<div>
-<p id="handRankSum">This is the hand sum</p>
 </div>
 </div>
 </div>
