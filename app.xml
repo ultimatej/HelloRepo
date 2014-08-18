@@ -93,6 +93,7 @@
 
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.js"></script>
 <script src="http://localhost/development/JavaScript-Playing-Cards/playingCards.ui.js"></script>
+<script src="http://localhost/development/player.js"></script>
 <!-- The JavaScript for this app. This must always be a full URL not a
      relative path.
      Tip: You can load it from a local web server such as
