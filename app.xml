@@ -74,11 +74,14 @@
 <body>
 <div id="container">
 <div id="top">
-<h1 style="text-align: center;">Market</h1>
+<h1 style="text-align: center;">Card Street</h1>
 <p id="marketAsk">$Market Ask</p>
 <p id="marketBid">$Market Bid</p>
-<p id="yourBid">$Your Bid</p>
-<p id="yourAsk">$Your Ask</p>
+<form >
+Your Bid: <input type="text" id="yourBid" value="$Your Bid"><br>
+Your Ask: <input type="text" id="yourAsk" value="$Your Ask"><br>
+<input type="button" id="updateBidAsk" value="Update Bid/Ask">
+</form>
 </div>
 <div id="bottomContainer">
 <p id="currentPosition">This is your current position</p>
