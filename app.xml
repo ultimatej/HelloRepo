@@ -69,6 +69,21 @@
         float: right;
         width: 50%;
     }
+
+    #myform {
+    text-align: center;
+    padding: 5px;
+    border: 1px dotted #ccc;
+    margin: 2%;
+    }
+    .qty {
+        width: 40px;
+        height: 25px;
+        text-align: center;
+    }
+    input.qtyplus { width:25px; height:25px;}
+    input.qtyminus { width:25px; height:25px;}
+
 </style>
 </head>
 <body>
@@ -77,11 +92,18 @@
 <h1 style="text-align: center;">Card Street</h1>
 <p id="marketAsk">$Market Ask</p>
 <p id="marketBid">$Market Bid</p>
-<form >
+
+<form id='myform' method='POST' action='#'>
+    <input type='button' value='-' class='qtyminus' field='quantity' />
+    <input type='text' name='quantity' value='0' class='qty' />
+    <input type='button' value='+' class='qtyplus' field='quantity' />
+</form>
+
+<!-- <form >
 Your Bid: <input type="text" id="yourBid" value="$Your Bid"><br>
 Your Ask: <input type="text" id="yourAsk" value="$Your Ask"><br>
-<input type="button" id="updateBidAsk" value="Update Bid/Ask">
 </form>
+ -->
 </div>
 <div id="bottomContainer">
 <p id="currentPosition">This is your current position</p>
