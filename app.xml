@@ -73,7 +73,6 @@
     #myform {
     text-align: center;
     padding: 5px;
-    border: 1px dotted #ccc;
     margin: 2%;
     }
     .qty {
@@ -93,7 +92,12 @@
 <p id="marketAsk">$Market Ask</p>
 <p id="marketBid">$Market Bid</p>
 
-<form id='myform' method='POST' action='#'>
+<form id='myform'>
+    <input type='button' value='-' class='qtyminus' field='quantity' />
+    <input type='text' name='quantity' value='0' class='qty' />
+    <input type='button' value='+' class='qtyplus' field='quantity' />
+</form>
+<form id='myform'>
     <input type='button' value='-' class='qtyminus' field='quantity' />
     <input type='text' name='quantity' value='0' class='qty' />
     <input type='button' value='+' class='qtyplus' field='quantity' />
