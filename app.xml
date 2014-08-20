@@ -46,6 +46,7 @@
     #top {
         
         background: blue;
+        text-align: center;
     }
     #marketStats {
         background: green;       
@@ -100,7 +101,7 @@
 <body>
 <div id="container">
 <div id="top">
-<h1 style="text-align: center;">Card Street</h1>
+<h1>Card Street</h1>
 <div id="marketStats">
 <div id="marketAskDiv">
 <p id="marketAsk">$Market Ask</p>
@@ -110,20 +111,15 @@
 </div> 
 </div>
 
-
-
 <form id='myform'>
     <input type='button' value='-' class='qtyminus' field='quantity' />
-    <input type='text' name='quantity' value='0' class='qty' />
-    <input type='text' name='quantity' value='1' class='qty' />
+    <input type='text' id="yourBid" name='quantity' value='0' class='qty' />
+    <input type='text' id="yourAsk" name='quantity' value='1' class='qty' />
     <input type='button' value='+' class='qtyplus' field='quantity' />
 </form>
-
-<!-- <form >
-Your Bid: <input type="text" id="yourBid" value="$Your Bid"><br>
-Your Ask: <input type="text" id="yourAsk" value="$Your Ask"><br>
-</form>
- -->
+<form>
+    <input type='button' id='buyButton' value ='Buy' />
+    <input type='button' id='sellButton' value='Sell' />
 </div>
 <div id="bottomContainer">
 <p id="currentPosition">This is your current position</p>
