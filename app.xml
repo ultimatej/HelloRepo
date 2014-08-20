@@ -59,7 +59,6 @@
         background: green;       
         margin: auto;
         width: 50%;
-        padding-bottom: 5px;
     }
     #marketAskDiv {
         float: left;
@@ -92,7 +91,7 @@
     }
     #myform {
         text-align: center;
-        margin: 2%;
+        margin: 1%;
     }
     .qty {
         width: 40px;
