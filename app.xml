@@ -47,7 +47,19 @@
         
         background: blue;
     }
-    
+    #marketStats {
+        background: green;       
+        margin: auto;
+        width: 15%;
+    }
+    #marketAskDiv {
+        float: left;
+        width: 50%;
+    }
+    #marketBidDiv {
+        float: right;
+        width: 50%;
+    }    
     #bottomContainer {
         background: chocolate;
         position: absolute;
@@ -89,8 +101,16 @@
 <div id="container">
 <div id="top">
 <h1 style="text-align: center;">Card Street</h1>
+<div id="marketStats">
+<div id="marketAskDiv">
 <p id="marketAsk">$Market Ask</p>
+</div>
+<div id="marketBidDiv">
 <p id="marketBid">$Market Bid</p>
+</div> 
+</div>
+
+
 
 <form id='myform'>
     <input type='button' value='-' class='qtyminus' field='quantity' />
