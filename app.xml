@@ -85,7 +85,6 @@
 
     #myform {
     text-align: center;
-    padding: 5px;
     margin: 2%;
     }
     .qty {
@@ -93,6 +92,8 @@
         height: 25px;
         text-align: center;
     }
+    input.buy {width:40px;}
+    input.sell {width:40px;}
     input.qtyplus { width:25px; height:25px;}
     input.qtyminus { width:25px; height:25px;}
 
@@ -118,8 +119,8 @@
     <input type='button' value='+' class='qtyplus' field='quantity' />
 </form>
 <form>
-    <input type='button' id='buyButton' value ='Buy' />
-    <input type='button' id='sellButton' value='Sell' />
+    <input type='button' id='buyButton' class='buy' value ='Buy' />
+    <input type='button' id='sellButton' class='sell'value='Sell' />
 </div>
 <div id="bottomContainer">
 <p id="currentPosition">This is your current position</p>
