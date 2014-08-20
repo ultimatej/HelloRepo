@@ -49,10 +49,17 @@
         background: blue;
         text-align: center;
     }
+    #title {
+        margin-bottom: 5px;
+    }
+    #expectedValue {
+        margin: 0px;
+    }
     #marketStats {
         background: green;       
         margin: auto;
-        width: 15%;
+        width: 50%;
+        padding-bottom: 5px;
     }
     #marketAskDiv {
         float: left;
@@ -102,7 +109,7 @@
 <body>
 <div id="container">
 <div id="top">
-<h1>Card Street</h1>
+<h1 id='title'>Card Street</h1>
 <p id='expectedValue'>Expected Value</p>
 <div id="marketStats">
 <div id="marketAskDiv">
