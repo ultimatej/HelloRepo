@@ -95,11 +95,7 @@
 <form id='myform'>
     <input type='button' value='-' class='qtyminus' field='quantity' />
     <input type='text' name='quantity' value='0' class='qty' />
-    <input type='button' value='+' class='qtyplus' field='quantity' />
-</form>
-<form id='myform'>
-    <input type='button' value='-' class='qtyminus' field='quantity' />
-    <input type='text' name='quantity' value='0' class='qty' />
+    <input type='text' name='quantity' value='1' class='qty' />
     <input type='button' value='+' class='qtyplus' field='quantity' />
 </form>
 
