@@ -64,10 +64,22 @@
         float: left;
         width: 50%;
     }
+    #marketAsk {
+        margin-bottom: 0;
+    }
+    #marketAskPlayer {
+        margin-top: 0;
+    } 
     #marketBidDiv {
         float: right;
         width: 50%;
-    }    
+    }
+    #marketBid {
+        margin-bottom: 0;
+    }
+    #marketBidPlayer {
+        margin-top: 0;
+    }        
     #bottomContainer {
         background: chocolate;
         position: absolute;
