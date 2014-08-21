@@ -113,9 +113,11 @@
 <div id="marketStats">
 <div id="marketAskDiv">
 <p id="marketAsk">$Market Ask</p>
+<p id="marketAskPlayer">$Market Ask Player</p>
 </div>
 <div id="marketBidDiv">
 <p id="marketBid">$Market Bid</p>
+<p id="marketBidPlayer">$Market Bid Player</p>
 </div> 
 </div>
 <form id='myform'>
