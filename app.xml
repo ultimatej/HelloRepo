@@ -27,7 +27,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Ultimate Market Making</title>
-    <link rel="stylesheet" type="text/css" href="https://raw.githubusercontent.com/ultimatej/HelloRepo/master/PlayingCards/playingCards.ui.css">
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/ultimatej/HelloRepo/master/PlayingCards/playingCards.ui.css">
 
 <style type="text/css">
     <!-- body {
@@ -153,13 +153,13 @@
 </div>
 </body> 
 
-<script src="https://raw.githubusercontent.com/ultimatej/HelloRepo/master/PlayingCards/playingCards.js"></script>
-<script src="https://raw.githubusercontent.com/ultimatej/HelloRepo/master/PlayingCards/playingCards.ui.js"></script>
-<script src="https://raw.githubusercontent.com/ultimatej/HelloRepo/master/player.js"></script>
+<script src="https://rawgit.com/ultimatej/HelloRepo/master/PlayingCards/playingCards.js"></script>
+<script src="https://rawgit.com/ultimatej/HelloRepo/master/PlayingCards/playingCards.ui.js"></script>
+<script src="https://rawgit.com/ultimatej/HelloRepo/master/player.js"></script>
 <!-- The JavaScript for this app. This must always be a full URL not a
      relative path.
      Tip: You can load it from a local web server such as
      http://localhost/app.js for faster single user development --> 
-<script src="https://raw.githubusercontent.com/ultimatej/HelloRepo/master/app.js"></script> 
+<script src="https://rawgit.com/ultimatej/HelloRepo/master/app.js"></script> 
 ]]></Content>
 </Module>
