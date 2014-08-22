@@ -121,30 +121,34 @@
 <div id="container">
 <div id="top">
 <h1 id='title'>Card Street</h1>
-<p id='expectedValue'>Expected Value</p>
+    <p id='expectedValue'>Expected Value</p>
 <div id="marketStats">
 <div id="marketAskDiv">
-<p id="marketAsk">$Market Ask</p>
-<p id="marketAskPlayer">$Market Ask Player</p>
+    <p id="marketAsk">$Market Ask</p>
+    <p id="marketAskPlayer">$Market Ask Player</p>
 </div>
 <div id="marketBidDiv">
-<p id="marketBid">$Market Bid</p>
-<p id="marketBidPlayer">$Market Bid Player</p>
+    <p id="marketBid">$Market Bid</p>
+    <p id="marketBidPlayer">$Market Bid Player</p>
 </div> 
 </div>
 <form id='myform'>
-    <input type='button' value='-' class='qtyminus' field='quantity' />
+    <input type='button' value='-' class='qtyminus' field='quantity' onClick="minusButtonClick()" />
     <input type='text' id='yourBid' name='bidQuantity' value='0' class='qty' />
     <input type='text' id='yourAsk' name='askQuantity' value='1' class='qty' />
-    <input type='button' value='+' class='qtyplus' field='quantity' />
+    <input type='button' value='+' class='qtyplus' field='quantity onClick="plusButtonClick()"' />
 </form>
 <form>
-    <input type='button' id='buyButton' class='buy' value ='Buy' />
-    <input type='button' id='sellButton' class='sell'value='Sell' />
+    <input type='button' id='buyButton' class='buy' value ='Buy' onClick="buyButtonClick()" />
+    <input type='button' id='sellButton' class='sell' value='Sell' onClick="sellButtonClick()" />
+</form>
+<form>
+    <input type='button' id='startButton' onClick="startButtonClick()" />
+</form>
 </div>
 <div id="bottomContainer">
-<p id="currentPosition">This is your current position</p>
-<p id="handRankSum">This is the hand sum</p>
+    <p id="currentPosition">This is your current position</p>
+    <p id="handRankSum">This is the hand sum</p>
 <div id="yourHand">
 <div id="cardOne"></div>
 <div id="cardTwo"></div> 

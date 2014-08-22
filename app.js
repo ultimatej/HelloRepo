@@ -13,32 +13,47 @@
 * License for the specific language governing permissions and limitations under
 * the License.
 */
-var cardDeck = new playingCards();    
-var players = [];
-var marketAsk = undefined;
-var marketBid = undefined;
-var marketAskPlayer = undefined;
-var marketBidPlayer = undefined;
-var maxSpread = 4;
+
+function startButtonClick() {
+    var cardDeck = new playingCards();
+    var updates = {};    
+    var enabledParticipants = gapi.hangout.getEnabledParticipants(); 
+    for (var i = 0; i < enabledParticipants.length; i++) {
+        var currParticipant = enabledParticipants[i];
+        console.log("Participant name: " + currParticipant.person.displayName() + "Participant id: " + currParticipant.person.id);
+        var currPlayer = new Player(currParticipant.id, currParticipant.person.displayName);
+        currPlayer.dealHand(cardDeck);
+        currPlayer.setBid(expectedValue - maxSpread / 2);
+        currPlayer.setAsk(expectedValue + maxSpread / 2);
+        updates[currParticipant.id] = JSON.stringify(currPlayer);        
+    }
+        updates['cardDeck'] = JSON.stringify(cardDeck);
+        updates['maxSpread'] = '4';
+        updates['marketAsk'] = 'undefined';
+        updates['marketBid'] = 'undefined';
+        updates['marketAskPlayer'] = 'undefined';
+        updates['marketBidPlayer'] = 'undefined';
+        gapi.hangout.data.submitDelta(updates);
+}
 
 // This button will increment the value
-$('.qtyplus').click(function(e){
+function plusButtonClick() {
    // Stop acting like a button
     e.preventDefault();
     var player = getPlayerById(getUserHangoutId());
     player.incrementBidAsk();
     updateMarket();
-});
+}
 // This button will decrement the value till 0
-$(".qtyminus").click(function(e) {
+function minusButtonClick() {
     // Stop acting like a button
     e.preventDefault();
     var player = getPlayerById(getUserHangoutId());
     player.decrementBidAsk();
     updateMarket();
-});
+}
 
-$(".buy").click(function(e) {
+function buyButtonClick() {
     // Stop acting like a button
     e.preventDefault();
     var player = getPlayerById(getUserHangoutId());
@@ -52,9 +67,9 @@ $(".buy").click(function(e) {
     player.buy(marketAsk);
     marketAskPlayer.sell(marketAsk);
     updateMarket();
-});
+}
 
-$(".sell").click(function(e) {
+function sellButtonClick() {
     // Stop acting like a button
     e.preventDefault();
     var player = getPlayerById(getUserHangoutId());
@@ -68,7 +83,7 @@ $(".sell").click(function(e) {
     player.sell(marketBid);
     marketAskPlayer.sell(marketBid);
     updateMarket();
-});
+}
 
 function updateMarket() {
     var bids = [];
@@ -95,14 +110,6 @@ function getPlayerById(id) {
 
 function getUserHangoutId() {
   return gapi.hangout.getLocalParticipantId();
-}
-
-function initPlayers() {
-enabledParticipants = gapi.hangout.getEnabledParticipants(); 
-for (var i = 0; i < enabledParticipants.length; i++) {
-        console.log("Participant id: " + enabledParticipants[i].id + "...G+ id: " + enabledParticipants[i].person.id)
-        players[players.length] = new Player(enabledParticipants[i].id, enabledParticipants[i].person.displayName);        
-    }
 }
 
 function calculateExpectedValue() {
@@ -141,13 +148,7 @@ function setText(element, text) {
 
 
 function updateStateUi(state) {
-  var countElement = document.getElementById('count');
-  var stateCount = state['count'];
-  if (!stateCount) {
-    setText(countElement, 'Probably 0');
-  } else {
-    setText(countElement, stateCount.toString());
-  }
+  console.log(state);
 }
 
 function updateParticipantsUi(participants) {
@@ -162,24 +163,17 @@ function init() {
 
   var apiReady = function(eventObj) {
     if (eventObj.isApiReady) {
-      console.log('API is ready');
+        console.log('API is ready');
 
-      // gapi.hangout.data.onStateChanged.add(function(eventObj) {
-      //   updateStateUi(eventObj.state);
-      // });
+        gapi.hangout.data.onStateChanged.add(function(eventObj) {
+            updateStateUi(eventObj.state);
+        });
       //  gapi.hangout.onParticipantsChanged.add(function(eventObj) {
       //  updateParticipantsUi(eventObj.participants);
       // });
       // updateStateUi(gapi.hangout.data.getState());
       //  updateParticipantsUi(gapi.hangout.getParticipants());
-        initPlayers();
-        var expectedValue = calculateExpectedValue();
-        for (var i = 0; i < players.length; i++) {
-            players[i].dealHand();
-            players[i].setBid(expectedValue - maxSpread / 2);
-            players[i].setAsk(expectedValue + maxSpread / 2);
-        }
-        updateMarket();
+        
         gapi.hangout.onApiReady.remove(apiReady);
     }
   };

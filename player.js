@@ -3,7 +3,7 @@ function Player(id, name) {
 	this.id = id;
 	this.name = name;
 	this.hand = [];
-	this.handRankSum = 0;
+	this.handRankSum = undefined;
 	this.bid = undefined;
 	this.ask = undefined;
 	this.currPosition = 0;
@@ -18,7 +18,7 @@ Player.prototype.getName = function() {
 	return this.name;
 }
 
-Player.prototype.dealHand = function() {
+Player.prototype.dealHand = function(cardDeck) {
     for (var i = 0; i < 2; i++) {
         var c = cardDeck.draw();
         if(!c) {
@@ -28,7 +28,7 @@ Player.prototype.dealHand = function() {
         this.hand[this.hand.length] = c;  
     }
     
-    showHand(this.hand);
+    //showHand(this.hand);
     calculateHandRankSum(this.hand);
 }
 
@@ -49,8 +49,8 @@ function calculateHandRankSum(hand) {
         handRankSum += hand[i].numericRank();
     }
     console.log(handRankSum);
-    $('#handRankSum').html(handRankSum);
     this.handRankSum = handRankSum;
+    //$('#handRankSum').html(handRankSum);
 }
 
 Player.prototype.getBid = function() {
@@ -63,12 +63,12 @@ Player.prototype.getAsk = function() {
 
 Player.prototype.setBid = function(bid) {
 	this.bid = bid;
-	$('#yourBid').val(bid);
+	//$('#yourBid').val(bid);
 }
 
 Player.prototype.setAsk = function(ask) {
 	this.ask = ask;
-	$('#yourAsk').val(ask);
+	//$('#yourAsk').val(ask);
 }
 
 Player.prototype.decrementBidAsk = function() {
