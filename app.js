@@ -20,7 +20,7 @@ function startButtonClick() {
     var enabledParticipants = gapi.hangout.getEnabledParticipants(); 
     for (var i = 0; i < enabledParticipants.length; i++) {
         var currParticipant = enabledParticipants[i];
-        console.log("Participant name: " + currParticipant.person.displayName() + "Participant id: " + currParticipant.person.id);
+        console.log("Participant name: " + currParticipant.person.displayName + "Participant id: " + currParticipant.person.id);
         var currPlayer = new Player(currParticipant.id, currParticipant.person.displayName);
         currPlayer.dealHand(cardDeck);
         currPlayer.setBid(expectedValue - maxSpread / 2);
