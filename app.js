@@ -29,7 +29,7 @@ function startButtonClick() {
         updates[currParticipant.id] = JSON.stringify(currPlayer);        
     }
         updates['cardDeck'] = JSON.stringify(cardDeck);
-        updates['maxSpread'] = maxSpread;
+        updates['maxSpread'] = '' + maxSpread;
         updates['marketAsk'] = 'undefined';
         updates['marketBid'] = 'undefined';
         updates['marketAskPlayer'] = 'undefined';
