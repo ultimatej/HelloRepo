@@ -32,9 +32,9 @@ Player.prototype.dealHand = function(cardDeck) {
 
 Player.prototype.updateUI = function() {
     showHand(this.hand);
-    $('#yourBid').val(bid);
-    $('#yourAsk').val(ask);
-    $('#handRankSum').html(handRankSum);  
+    $('#yourBid').val(this.bid);
+    $('#yourAsk').val(this.ask);
+    $('#handRankSum').html(this.handRankSum);  
 }
 //Player.prototype.showHand = function() {
 function showHand(hand) {
