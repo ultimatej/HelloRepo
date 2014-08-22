@@ -16,7 +16,8 @@
 
 function startButtonClick() {
     var cardDeck = new playingCards();
-    var updates = {};    
+    var updates = {};
+    var maxSpread = 4;    
     var enabledParticipants = gapi.hangout.getEnabledParticipants(); 
     for (var i = 0; i < enabledParticipants.length; i++) {
         var currParticipant = enabledParticipants[i];
@@ -28,7 +29,7 @@ function startButtonClick() {
         updates[currParticipant.id] = JSON.stringify(currPlayer);        
     }
         updates['cardDeck'] = JSON.stringify(cardDeck);
-        updates['maxSpread'] = '4';
+        updates['maxSpread'] = maxSpread;
         updates['marketAsk'] = 'undefined';
         updates['marketBid'] = 'undefined';
         updates['marketAskPlayer'] = 'undefined';
