@@ -27,11 +27,15 @@ Player.prototype.dealHand = function(cardDeck) {
     }
         this.hand[this.hand.length] = c;  
     }
-    
-    //showHand(this.hand);
     calculateHandRankSum(this.hand);
 }
 
+Player.prototype.updateUI = function() {
+    showHand(this.hand);
+    $('#yourBid').val(bid);
+    $('#yourAsk').val(ask);
+    $('#handRankSum').html(handRankSum);  
+}
 //Player.prototype.showHand = function() {
 function showHand(hand) {
     var card1 = $('#cardOne')
@@ -50,7 +54,6 @@ function calculateHandRankSum(hand) {
     }
     console.log(handRankSum);
     this.handRankSum = handRankSum;
-    //$('#handRankSum').html(handRankSum);
 }
 
 Player.prototype.getBid = function() {
@@ -63,12 +66,10 @@ Player.prototype.getAsk = function() {
 
 Player.prototype.setBid = function(bid) {
 	this.bid = bid;
-	//$('#yourBid').val(bid);
 }
 
 Player.prototype.setAsk = function(ask) {
 	this.ask = ask;
-	//$('#yourAsk').val(ask);
 }
 
 Player.prototype.decrementBidAsk = function() {

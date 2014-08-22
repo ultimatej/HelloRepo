@@ -19,23 +19,28 @@ function startButtonClick() {
     var updates = {};
     var maxSpread = 4;    
     var enabledParticipants = gapi.hangout.getEnabledParticipants();
-    var expectedValue = 2 * 7 * enabledParticipants.length;
-    for (var i = 0; i < enabledParticipants.length; i++) {
+    var numPlayers = enabledParticipants.length;
+    var expectedValue = numPlayers * 2 * 7;
+    var startingBid = expectedValue - maxSpread / 2;
+    var startingAsk = expectedValue + maxSpread / 2;
+
+    for (var i = 0; i < numPlayers; i++) {
         var currParticipant = enabledParticipants[i];
         console.log("Participant name: " + currParticipant.person.displayName + "Participant id: " + currParticipant.person.id);
         var currPlayer = new Player(currParticipant.id, currParticipant.person.displayName);
         currPlayer.dealHand(cardDeck);
-        currPlayer.setBid(expectedValue - maxSpread / 2);
-        currPlayer.setAsk(expectedValue + maxSpread / 2);
+        currPlayer.setBid(startingBid);
+        currPlayer.setAsk(startingAsk);
         updates[currParticipant.id] = JSON.stringify(currPlayer);        
     }
-        updates['cardDeck'] = JSON.stringify(cardDeck);
-        updates['maxSpread'] = '' + maxSpread;
-        updates['marketAsk'] = 'undefined';
-        updates['marketBid'] = 'undefined';
-        updates['marketAskPlayer'] = 'undefined';
-        updates['marketBidPlayer'] = 'undefined';
-        gapi.hangout.data.submitDelta(updates);
+    var randomPlayerName = enabledParticipants[Math.floor(Math.random() * numPlayers)].person.displayName;
+    updates['cardDeck'] = JSON.stringify(cardDeck);
+    updates['maxSpread'] = '' + maxSpread;
+    updates['marketAsk'] = '' + startingAsk;
+    updates['marketBid'] = '' + startingBid;
+    updates['marketAskPlayer'] = '' + randomPlayerName;
+    updates['marketBidPlayer'] = '' + randomPlayerName;
+    gapi.hangout.data.submitDelta(updates);
 }
 
 // This button will increment the value
@@ -136,11 +141,6 @@ function setMarketBid(bid, player) {
     $('#marketBidPlayer').html("(" + marketBidPlayer.getName() + ")");
 }
 
-function resetButtonClick() {
-  console.log('Resetting count to 0');
-  gapi.hangout.data.submitDelta({'count': '0'});
-}
-
 var forbiddenCharacters = /[^a-zA-Z!0-9_\- ]/;
 function setText(element, text) {
   element.innerHTML = typeof text === 'string' ?
@@ -148,9 +148,11 @@ function setText(element, text) {
       '';
 }
 
-
 function updateStateUi(state) {
   console.log(state);
+  var player = JSON.parse(state.getValue(getUserHangoutId()))
+  player.updateUI();
+
 }
 
 function updateParticipantsUi(participants) {
