@@ -150,7 +150,7 @@ function setText(element, text) {
 
 function updateStateUi(state) {
   console.log(state);
-  var player = JSON.parse(state.getValue(getUserHangoutId()))
+  var player = JSON.parse(state.getUserHangoutId());
   player.updateUI();
 
 }
