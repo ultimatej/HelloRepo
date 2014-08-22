@@ -139,11 +139,11 @@
     <input type='button' value='+' class='qtyplus' field='quantity onClick="plusButtonClick()"' />
 </form>
 <form>
-    <input type='button' id='buyButton' class='buy' value ='Buy' onClick="buyButtonClick()" />
+    <input type='button' id='buyButton' class='buy' value='Buy' onClick="buyButtonClick()" />
     <input type='button' id='sellButton' class='sell' value='Sell' onClick="sellButtonClick()" />
 </form>
 <form>
-    <input type='button' id='startButton' onClick="startButtonClick()" />
+    <input type='button' id='startButton' value='Start' onClick="startButtonClick()" />
 </form>
 </div>
 <div id="bottomContainer">

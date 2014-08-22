@@ -18,7 +18,8 @@ function startButtonClick() {
     var cardDeck = new playingCards();
     var updates = {};
     var maxSpread = 4;    
-    var enabledParticipants = gapi.hangout.getEnabledParticipants(); 
+    var enabledParticipants = gapi.hangout.getEnabledParticipants();
+    var expectedValue = 2 * 7 * enabledParticipants.length;
     for (var i = 0; i < enabledParticipants.length; i++) {
         var currParticipant = enabledParticipants[i];
         console.log("Participant name: " + currParticipant.person.displayName + "Participant id: " + currParticipant.person.id);
