@@ -51,6 +51,13 @@
         background: blue;
         text-align: center;
     }
+    #countdown {
+    color: #1B232F;
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    }
     #title {
         margin-bottom: 5px;
     }
@@ -122,6 +129,7 @@
 <body>
 <div id="container">
 <div id="top">
+<div id="countdown"></div>
 <h1 id='title'>Card Street</h1>
     <p id='expectedValue'>Expected Value</p>
 <div id="marketStats">
