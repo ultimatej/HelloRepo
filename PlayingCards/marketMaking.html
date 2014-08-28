@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="playingCards.ui.css">
+<script
+src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js">
+</script>
+</head>
+<body>
+<script src="playingCards.js"></script>
+<script src="playingCards.ui.js"></script>
+<h1 id="h01"> Look at the pretty cards! </h1>
+<div id="cardTable"></div>
+<script>
+var cardDeck = $('#cardTable').playingCards(); // will lay out a random deck on the cardTable element
+cardDeck.spread();
+</script>
+</body>
+</html> 
