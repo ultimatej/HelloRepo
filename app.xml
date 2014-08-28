@@ -175,7 +175,7 @@
      relative path.
      Tip: You can load it from a local web server such as
      http://localhost/app.js for faster single user development --> 
-<script src="http://localhost/development/app.js"></script>  -->
+<!-- <script src="http://localhost/development/app.js"></script>  -->
 
 <script src="https://rawgit.com/ultimatej/HelloRepo/master/PlayingCards/playingCards.js"></script>
 <script src="https://rawgit.com/ultimatej/HelloRepo/master/PlayingCards/playingCards.ui.js"></script>

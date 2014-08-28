@@ -95,8 +95,8 @@
             }
             return [
             '<div class="suit A1">', this.suitCode, '</div>',
-            '<img class="suit ', this.rank, ' face" src="', imgPrefix, 'http://localhost/development/PlayingCards/img/', this.rank, n, '.gif"/>',
-            // '<img class="suit ', this.rank, ' face" src="', imgPrefix, 'https://rawgit.com/ultimatej/HelloRepo/master/PlayingCards/img/', this.rank, n, '.gif"/>',
+            //'<img class="suit ', this.rank, ' face" src="', imgPrefix, 'http://localhost/development/PlayingCards/img/', this.rank, n, '.gif"/>',
+             '<img class="suit ', this.rank, ' face" src="', imgPrefix, 'https://rawgit.com/ultimatej/HelloRepo/master/PlayingCards/img/', this.rank, n, '.gif"/>',
             '<div class="suit C5 flip">', this.suitCode, '</div>'
             ];
         }
