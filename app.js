@@ -90,10 +90,8 @@ function startCountdown(minutes, seconds) {
 
     function updateTimer() {
         msLeft = endTime - (new Date().getTime());
-        if ( msLeft < 1000 ) {
-            //stop game
-        } else {
-            gapi.hangout.data.submitDelta({'countdown': '' + msLeft});
+        gapi.hangout.data.submitDelta({'countdown': '' + msLeft});
+        if ( msLeft >= 1000 ) {
             time = new Date( msLeft );
             setTimeout( updateTimer, time.getUTCMilliseconds() + 500 );
         }
@@ -112,13 +110,23 @@ function setCountdown(milliseconds)
         return (n <= 9 ? "0" + n : n);
     }
 
-    time = new Date( msLeft );
-    hours = time.getUTCHours();
-    mins = time.getUTCMinutes();
-    secs = time.getUTCSeconds();
-    element.html((hours ? hours + ':' + twoDigits(mins) : mins) + ':' + twoDigits(secs));
-    //element.innerHTML = "game over!";
+    if (msLeft >= 1000) {
+        time = new Date( msLeft );
+        hours = time.getUTCHours();
+        mins = time.getUTCMinutes();
+        secs = time.getUTCSeconds();
+        element.html((hours ? hours + ':' + twoDigits(mins) : mins) + ':' + twoDigits(secs));
+        
+    }
+    else {
+        //stop the game in all clients, clear canvas, figure out score, post info.
+        element.html("game over!");
 
+    }
+}
+
+function stopGame() {
+    console.log("game over!");
 }
 
 function startButtonClick() {
@@ -295,6 +303,7 @@ function updateStateUi(state) {
     //console.log("cardDeck: " + JSON.stringify(cardDeck));
 
     //console.log("work please: " + player.getName() + "playerID: " + player.getId());
+    $('#startButton).style.visibility = "hidden";
     player.updateUI();
     $('#marketBid').html("Market Bid: " + state['marketBid']);
     $('#marketBidPlayer').html("(" + state['marketBidPlayer'] + ")");

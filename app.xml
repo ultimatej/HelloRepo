@@ -43,19 +43,17 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: red;
+        background: gray;
     }
     #top {
-        
-        background: blue;
         text-align: center;
     }
     #countdown {
-    color: #1B232F;
-    font-family: Verdana, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: bold;
-    text-decoration: none;
+        <!-- color: #1B232F; -->
+        <!-- font-family: Verdana, Arial, sans-serif; -->
+        font-size: 18px;
+        font-weight: bold;
+        text-decoration: none;
     }
     #title {
         margin-bottom: 5px;
@@ -64,7 +62,6 @@
         margin: 0px;
     }
     #marketStats {
-        background: green;       
         margin: auto;
         width: 50%;
     }
@@ -89,7 +86,6 @@
         margin-top: 0;
     }        
     #bottomContainer {
-        background: chocolate;
         position: absolute;
         bottom: 5px;
         left: 0;
@@ -97,7 +93,6 @@
         text-align: center;
     }
     #yourHand {
-        background: green;       
         margin: auto;
         width: 15%;
     }
