@@ -27,9 +27,8 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Ultimate Market Making</title>
-    <link rel="stylesheet" type="text/css" <!-- href="http://localhost/development/PlayingCards/playingCards.ui.css"> -->
-
-    href="https://rawgit.com/ultimatej/HelloRepo/master/PlayingCards/playingCards.ui.css">
+     <!-- href="http://localhost/development/PlayingCards/playingCards.ui.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://rawgit.com/ultimatej/HelloRepo/master/PlayingCards/playingCards.ui.css">
 
 <style type="text/css">
     <!-- body {
