@@ -303,7 +303,7 @@ function updateStateUi(state) {
     //console.log("cardDeck: " + JSON.stringify(cardDeck));
 
     //console.log("work please: " + player.getName() + "playerID: " + player.getId());
-    $('#startButton').style.visibility = "hidden";
+    //$('#startButton').style.visibility = "hidden";
     player.updateUI();
     $('#marketBid').html("Market Bid: " + state['marketBid']);
     $('#marketBidPlayer').html("(" + state['marketBidPlayer'] + ")");
