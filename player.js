@@ -1,6 +1,6 @@
 function Player(id, name) {
 	this.id = id;
-    this.name = name;
+  this.name = name;
 	this.hand = [];
 	this.handRankSum = undefined;
 	this.bid = undefined;
@@ -15,6 +15,10 @@ Player.prototype.getId = function() {
 
 Player.prototype.getName = function() {
 	return this.name;
+}
+
+Player.prototype.getHandRankSum = function() {
+  return this.handRankSum;
 }
 
 Player.prototype.dealHand = function(cardDeck) {
@@ -34,8 +38,10 @@ Player.prototype.updateUI = function() {
     $('#yourBid').val(this.bid);
     $('#yourAsk').val(this.ask);
     $('#handRankSum').html(this.handRankSum);
-    $('#currentPosition').html("Position: " + this.currPosition + "...Cost Basis: " + this.currBalance);  
+    $('#currentPosition').html("Position: " + this.currPosition + 
+      "...Cost Basis: " + this.currBalance / Math.abs(this.currPosition));  
 }
+
 Player.prototype.showHand = function() {
 //function showHand(hand) {
     var card1 = $('#cardOne')
@@ -94,6 +100,11 @@ Player.prototype.buy = function(price) {
 Player.prototype.sell = function(price) {
 	this.currPosition--;
 	this.currBalance += price;
+}
+
+Player.prototype.closePositions = function(positionValue) {
+  this.currBalance += this.currPosition * positionValue;
+  this.currPosition = 0;
 }
 
 Player.prototype.toJSON = function() {

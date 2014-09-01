@@ -121,12 +121,23 @@ function setCountdown(milliseconds)
     else {
         //stop the game in all clients, clear canvas, figure out score, post info.
         element.html("game over!");
+        scoreGame();
 
     }
 }
 
-function stopGame() {
+function scoreGame() {
     console.log("game over!");
+    state = gapi.hangout.data.getState();
+    var players = JSON.parse(state['players'], Reviver);
+    var scores = [];
+    for (var i = 0; i < players.length; i++) {
+        players[i].closePositions(state['contractValue']);
+        scores[i] = players[i].getBalance();
+    }
+    var maxScore = Math.max.apply(null, scores);
+    var winner = players[indexOf(maxScore)];
+    console.log("winner: " + winner);
 }
 
 function startButtonClick() {
@@ -141,12 +152,14 @@ function startButtonClick() {
     var startingAsk = expectedValue + maxSpread / 2;
     var minutes = 5;
     var seconds = 0;
+    var contractValue = 0;
 
     for (var i = 0; i < numPlayers; i++) {
         var currParticipant = enabledParticipants[i];
         console.log("Participant name: " + currParticipant.person.displayName + "Participant id: " + currParticipant.person.id);
         var currPlayer = new Player(currParticipant.id, currParticipant.person.displayName);
         currPlayer.dealHand(cardDeck);
+        contractValue += currPlayer.getHandRankSum();
         currPlayer.setBid(startingBid);
         currPlayer.setAsk(startingAsk);
         players[i] = currPlayer;        
@@ -160,6 +173,7 @@ function startButtonClick() {
     updates['marketBid'] = '' + startingBid;
     updates['marketAskPlayer'] = '' + randomPlayerName;
     updates['marketBidPlayer'] = '' + randomPlayerName;
+    updates['contractValue'] = '' + contractValue;
     updates['countdown'] = '' + 1000 * (minutes * 60 + seconds);
     gapi.hangout.data.submitDelta(updates);
     startCountdown(minutes, seconds );
