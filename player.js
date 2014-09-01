@@ -21,6 +21,10 @@ Player.prototype.getHandRankSum = function() {
   return this.handRankSum;
 }
 
+Player.prototype.getBalance = function() {
+  return this.currBalance;
+}
+
 Player.prototype.dealHand = function(cardDeck) {
     for (var i = 0; i < 2; i++) {
         var c = cardDeck.draw();
