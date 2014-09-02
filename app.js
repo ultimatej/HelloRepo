@@ -136,8 +136,10 @@ function scoreGame() {
         scores[i] = players[i].getBalance();
     }
     var maxScore = Math.max.apply(null, scores);
-    var winner = players[indexOf(maxScore)];
+    var winner = players[scores.indexOf(maxScore)];
     console.log("winner: " + winner);
+    $('container').empty();
+    $('container').html("Congratulations winner: " + winner.getName() + "Score: " + maxScore);
 }
 
 function startButtonClick() {
