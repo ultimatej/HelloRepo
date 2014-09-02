@@ -138,8 +138,8 @@ function scoreGame() {
     var maxScore = Math.max.apply(null, scores);
     var winner = players[scores.indexOf(maxScore)];
     console.log("winner: " + winner);
-    $('container').empty();
-    $('container').html("Congratulations winner: " + winner.getName() + "Score: " + maxScore);
+    //$('container').empty();
+    alert("Congratulations winner: " + winner.getName() + "Score: " + maxScore);
 }
 
 function startButtonClick() {
