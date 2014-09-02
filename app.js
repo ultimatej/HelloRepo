@@ -152,8 +152,8 @@ function startButtonClick() {
     var expectedValue = numPlayers * 2 * 7;
     var startingBid = expectedValue - maxSpread / 2;
     var startingAsk = expectedValue + maxSpread / 2;
-    var minutes = 0;
-    var seconds = 10;
+    var minutes = 5;
+    var seconds = 0;
     var contractValue = 0;
 
     for (var i = 0; i < numPlayers; i++) {
