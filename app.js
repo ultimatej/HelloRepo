@@ -139,7 +139,7 @@ function scoreGame() {
     var winner = players[scores.indexOf(maxScore)];
     console.log("winner: " + winner);
     //$('container').empty();
-    alert("Congratulations winner: " + winner.getName() + "Score: " + maxScore);
+    alert("Congratulations winner: " + winner.getName() + "...Score: " + maxScore);
 }
 
 function startButtonClick() {
