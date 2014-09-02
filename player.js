@@ -43,8 +43,8 @@ Player.prototype.updateUI = function() {
     $('#yourAsk').val(this.ask);
     $('#handRankSum').html(this.handRankSum);
     $('#currentPosition').html("Position: " + this.currPosition + 
-      "...Cost Basis: " + this.currBalance != 0 ? this.currBalance / 
-      Math.abs(this.currPosition) : this.currBalance);  
+      "...Cost Basis: " + (this.currBalance != 0 ? this.currBalance / 
+      Math.abs(this.currPosition) : this.currBalance));  
 }
 
 Player.prototype.showHand = function() {
