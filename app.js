@@ -139,7 +139,10 @@ function scoreGame() {
     var winner = players[scores.indexOf(maxScore)];
     console.log("winner: " + winner);
     //$('container').empty();
-    alert("Congratulations winner: " + winner.getName() + "...Score: " + maxScore);
+    alert("Congratulations winner: " + winner.getName() + "...Score: " + maxScore + 
+        "\n" + players[0].getName() + "...Score: " + scores[0] + 
+        "\n" + players[1].getName() + "...Score: " + scores[1] +
+        "\n" + players[2].getName() + "...Score: " + scores[2]);
 }
 
 function startButtonClick() {
@@ -152,8 +155,8 @@ function startButtonClick() {
     var expectedValue = numPlayers * 2 * 7;
     var startingBid = expectedValue - maxSpread / 2;
     var startingAsk = expectedValue + maxSpread / 2;
-    var minutes = 5;
-    var seconds = 0;
+    var minutes = 2;
+    var seconds = 30;
     var contractValue = 0;
 
     for (var i = 0; i < numPlayers; i++) {
