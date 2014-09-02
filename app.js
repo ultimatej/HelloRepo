@@ -141,8 +141,7 @@ function scoreGame() {
     //$('container').empty();
     alert("Congratulations winner: " + winner.getName() + "...Score: " + maxScore + 
         "\n" + players[0].getName() + "...Score: " + scores[0] + 
-        "\n" + players[1].getName() + "...Score: " + scores[1] +
-        "\n" + players[2].getName() + "...Score: " + scores[2]);
+        "\n" + players[1].getName() + "...Score: " + scores[1]);
 }
 
 function startButtonClick() {
